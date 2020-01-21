@@ -58,6 +58,8 @@
            already included in head. -#}
         {%- if "jquery" not in scriptfile.lower() -%}
             <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+        {%- elif "lightbox" in scriptfile.lower() -%}
+            <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
         {%- endif -%}
     {%- endfor -%}
 {%- endmacro -%}
